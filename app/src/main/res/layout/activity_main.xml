@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".MainActivity">
     <TextView
         android:layout_width="match_parent"
@@ -16,11 +17,14 @@
         app:layout_constraintBottom_toTopOf="@id/layGame"/>
     <LinearLayout
         android:id="@+id/layGame"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
+        android:background="@drawable/background_game"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent">
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -30,16 +34,26 @@
                 android:id="@+id/btn1"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
+                android:background="@color/white"
+                android:layout_marginEnd="2.5dp"
+                android:layout_marginBottom="2.5dp"
                 android:textSize="35sp"/>
             <Button
                 android:id="@+id/btn2"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
+                android:background="@color/white"
+                android:layout_marginEnd="2.5dp"
+                android:layout_marginStart="2.5dp"
+                android:layout_marginBottom="2.5dp"
                 android:textSize="35sp"/>
             <Button
                 android:id="@+id/btn3"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
+                android:background="@color/white"
+                android:layout_marginStart="2.5dp"
+                android:layout_marginBottom="2.5dp"
                 android:textSize="35sp"/>
         </LinearLayout>
         <LinearLayout
@@ -51,16 +65,26 @@
                 android:id="@+id/btn4"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
+                android:background="@color/white"
+                android:layout_marginEnd="2.5dp"
+                android:layout_marginBottom="2.5dp"
                 android:textSize="35sp"/>
             <Button
                 android:id="@+id/btn5"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
+                android:background="@color/white"
+                android:layout_marginEnd="2.5dp"
+                android:layout_marginStart="2.5dp"
+                android:layout_marginBottom="2.5dp"
                 android:textSize="35sp"/>
             <Button
                 android:id="@+id/btn6"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
+                android:background="@color/white"
+                android:layout_marginStart="2.5dp"
+                android:layout_marginBottom="2.5dp"
                 android:textSize="35sp"/>
         </LinearLayout>
         <LinearLayout
@@ -72,16 +96,23 @@
                 android:id="@+id/btn7"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
+                android:background="@color/white"
+                android:layout_marginEnd="2.5dp"
                 android:textSize="35sp"/>
             <Button
                 android:id="@+id/btn8"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
+                android:background="@color/white"
+                android:layout_marginEnd="2.5dp"
+                android:layout_marginStart="2.5dp"
                 android:textSize="35sp"/>
             <Button
                 android:id="@+id/btn9"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
+                android:layout_marginStart="2.5dp"
+                android:background="@color/white"
                 android:textSize="35sp"/>
         </LinearLayout>
     </LinearLayout>
