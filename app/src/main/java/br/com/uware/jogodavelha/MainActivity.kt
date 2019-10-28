@@ -87,13 +87,17 @@ class MainActivity : AppCompatActivity() {
                 }
             }
         }
-        if(btnList[0].text != "" && btnList[0].text == btnList[4].text && btnList[8].text == "") return 8
-        if(btnList[4].text != "" && btnList[4].text == btnList[8].text && btnList[0].text == "") return 0
-        if(btnList[0].text != "" && btnList[0].text == btnList[4].text && btnList[4].text == "") return 4
-        if(btnList[2].text != "" && btnList[2].text == btnList[4].text && btnList[6].text == "") return 6
-        if(btnList[2].text != "" && btnList[2].text == btnList[6].text && btnList[4].text == "") return 4
-        if(btnList[4].text != "" && btnList[4].text == btnList[6].text && btnList[2].text == "") return 2
+        numb = listOf(0,4,8)
+        if(checkDiag(numb) != -1) return checkDiag(numb)
+        numb = listOf(2,4,6)
+        if(checkDiag(numb) != -1) return checkDiag(numb)
         return -1
+    }
+    private fun checkDiag(numb: List<Int>): Int {
+        if(btnList[numb[0]].text != "" && btnList[numb[0]].text == btnList[numb[1]].text && btnList[numb[2]].text == "") return numb[2]
+        else if(btnList[numb[1]].text != "" && btnList[numb[1]].text == btnList[numb[2]].text && btnList[numb[0]].text == "") return numb[0]
+        else if(btnList[numb[0]].text != "" && btnList[numb[0]].text == btnList[numb[2]].text && btnList[numb[1]].text == "") return numb[1]
+        else return -1
     }
     private fun restart(){
         for(x in 0..btnList.size-1){
